@@ -1,0 +1,16 @@
+common:
+  port: 8080
+  release: false
+database:
+  type: sqlite
+mysql:
+  username: root
+  password: password
+  host: localhost
+  port: 3306
+  database: example
+  charset: utf8mb4
+sqlite:
+  path: ./db/example.db
+secret:
+  key: demo.key
