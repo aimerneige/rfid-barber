@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RfidBarberClient.Models;
 
 namespace RfidBarberClient
 {
@@ -20,9 +21,11 @@ namespace RfidBarberClient
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MainWindowModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new MainWindowModel();
         }
     }
 }

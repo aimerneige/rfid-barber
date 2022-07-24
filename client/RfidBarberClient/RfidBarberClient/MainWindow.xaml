@@ -7,12 +7,11 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="未来荧黑"
+        FontFamily="Glow Sans SC Normal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,18 +19,46 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <materialDesign:Card Padding="32" Margin="16">
-            <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">总卡数</TextBlock>
+        <materialDesign:Card Padding="16" Margin="16">
+            <StackPanel>
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">总卡数</TextBlock>
+                <Separator />
+                <TextBlock Style="{DynamicResource MaterialDesignBody1TextBlock}">200</TextBlock>
+            </StackPanel>
         </materialDesign:Card>
-        <materialDesign:Card Padding="32" Margin="16" Grid.Column="1">
-            <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">周收入</TextBlock>
+        <materialDesign:Card Padding="16" Margin="16" Grid.Column="1">
+            <StackPanel>
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">周收入</TextBlock>
+                <Separator />
+                <TextBlock Style="{DynamicResource MaterialDesignBody1TextBlock}">10086</TextBlock>
+            </StackPanel>
         </materialDesign:Card>
-        <materialDesign:Card Padding="32" Margin="16" Grid.Column="2">
-            <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">趋势</TextBlock>
+        <materialDesign:Card Padding="16" Margin="16" Grid.Column="2">
+            <StackPanel>
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">收入趋势</TextBlock>
+                <Separator />
+                <TextBlock Style="{DynamicResource MaterialDesignBody1TextBlock}">+2.5%</TextBlock>
+            </StackPanel>
         </materialDesign:Card>
+        <materialDesign:Card Margin="16" Grid.Row="1" Grid.ColumnSpan="3">
+            <TabControl
+                Height="560"
+                Style="{StaticResource MaterialDesignFilledTabControl}"
+                TabStripPlacement="Left">
+                <TabItem TabIndex="0" Header="开卡">
+                </TabItem>
+                <TabItem TabIndex="1" Header="划卡">
+                </TabItem>
+                <TabItem TabIndex="2" Header="设置">
+                </TabItem>
+            </TabControl>
+        </materialDesign:Card>
+        <TextBlock Style="{DynamicResource MaterialDesignBody1TextBlock}" Margin="16,0,16,0" Grid.Row="2" Grid.ColumnSpan="3">
+            读卡器：ACR122U-已连接 服务器：localhost-已连接
+        </TextBlock>
     </Grid>
 </Window>
