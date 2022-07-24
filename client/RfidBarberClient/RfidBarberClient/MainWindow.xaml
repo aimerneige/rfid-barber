@@ -50,8 +50,9 @@
                 Style="{StaticResource MaterialDesignFilledTabControl}"
                 TabStripPlacement="Left">
                 <TabItem TabIndex="0" Header="开卡">
+                    <Frame Margin="64" Source="Views/AddCardTab.xaml"></Frame>
                 </TabItem>
-                <TabItem TabIndex="1" Header="划卡">
+                <TabItem TabIndex="1" Header="划卡" >
                 </TabItem>
                 <TabItem TabIndex="2" Header="设置">
                 </TabItem>
