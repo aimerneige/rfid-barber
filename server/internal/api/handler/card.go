@@ -11,21 +11,22 @@ import (
 // CreateCard create a newe card
 func CreateCard(c *gin.Context) {
 	type requestDto struct {
-		Name  string `json:"name"`
-		Phone string `json:"phone"`
-		RFID  string `json:"rfid"`
+		Name    string `json:"name"`
+		Phone   string `json:"phone"`
+		RFID    string `json:"rfid"`
+		Balance uint   `json:"balance"`
 	}
 	var dto requestDto
 	if err := c.ShouldBindJSON(&dto); err != nil {
 		response.BadRequest(c, err, "Fail to bind json.")
 		return
 	}
-	if dto.Name == "" || dto.Phone == "" || dto.RFID == "" {
+	if dto.Name == "" || dto.Phone == "" || dto.RFID == "" || dto.Balance < 0 {
 		response.BadRequest(c, nil, "Not a valid data.")
 		return
 	}
 	cardService := service.NewCardService()
-	if err := cardService.Create(dto.Name, dto.Phone, dto.RFID, 0); err != nil {
+	if err := cardService.Create(dto.Name, dto.Phone, dto.RFID, dto.Balance); err != nil {
 		response.InternalServerError(c, err, "Fail to create card.")
 		return
 	}
