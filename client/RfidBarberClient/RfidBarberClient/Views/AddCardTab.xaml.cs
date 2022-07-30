@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RfidBarberClient.Views
+namespace RfidBarberClient.Views;
+
+/// <summary>
+/// AddCardTab.xaml 的交互逻辑
+/// </summary>
+public partial class AddCardTab : Page
 {
-    /// <summary>
-    /// AddCardTab.xaml 的交互逻辑
-    /// </summary>
-    public partial class AddCardTab : Page
+    public AddCardTab()
     {
-        public AddCardTab()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

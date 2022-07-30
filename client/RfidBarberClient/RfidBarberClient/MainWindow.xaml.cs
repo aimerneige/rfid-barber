@@ -14,18 +14,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RfidBarberClient.Models;
 
-namespace RfidBarberClient
+namespace RfidBarberClient;
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    private readonly MainWindowModel _viewModel;
+    public MainWindow()
     {
-        private readonly MainWindowModel _viewModel;
-        public MainWindow()
-        {
-            InitializeComponent();
-            _viewModel = new MainWindowModel();
-        }
+        InitializeComponent();
+        _viewModel = new MainWindowModel();
     }
 }
